@@ -3,10 +3,10 @@
 
 My solutions to the euler project challenges (https://projecteuler.net) implemented in C++
 
-**Contents**<br>
-[Challenge 1 : Multiples of 3 or 5](Multiples-of-3-or-5)<br>
-[Challenge 2 : Even fibonacci numbers](Even-fibonacci-numbers)<br>
-[Challenge 3 : Largest prime factor](Largest-prime-factor)<br>
+### Table of Contents<br>
+**[Challenge 1 : Multiples of 3 or 5](#multiples-of-3-or-5)**<br>
+**[Challenge 2 : Even fibonacci numbers](#even-fibonacci-numbers)**<br>
+**[Challenge 3 : Largest prime factor](#largest-prime-factor)**<br>
 
 ## Challenge 1 : Multiples of 3 or 5
 
