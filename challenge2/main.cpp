@@ -44,7 +44,7 @@ bool CacheFibonacciValue(const uint8_t index,const uint64_t value)
         return false;
     }
     else {
-        std::cout << "Cached " << unsigned(value) << " at " << unsigned(index) << std::endl;
+        // std::cout << "Cached " << unsigned(value) << " at " << unsigned(index) << std::endl;
         fibonacciCacheTable[index] = value;
     }
     return true;
