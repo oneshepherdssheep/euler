@@ -1,5 +1,5 @@
 //
-// Created by betzalel on 28/07/2022.
+// Created by oneshepherdssheep on 28/07/2022.
 //
 
 #ifndef CHALLENGE3_ERATOSTHENE_TABLE_H
