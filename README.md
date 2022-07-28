@@ -25,6 +25,14 @@ So if we compute the sum of numbers *only* multiple of 3 (S3), then those *only*
 the sum of numbers *only* multiple of 15 (S15) and then compute the *S = (S3+S5)-S15*, we should have the
 expected value.
 
+### Benchmarking
+
+The benchmarked code using [nanobench](https://github.com/martinus/nanobench) takes 11,789.42 nanoseconds (~11.8 us) to run on my machine.
+
+|               ns/op |                op/s |    err% |          ins/op |         bra/op |   miss% |     total | benchmark
+|--------------------:|--------------------:|--------:|----------------:|---------------:|--------:|----------:|:----------
+|           11,789.42 |           84,821.80 |    0.1% |       66,266.11 |      13,012.02 |    0.0% |      0.01 | `some double ops`
+
 ## Even fibonacci numbers
 
 ### Description
@@ -47,7 +55,13 @@ Fibonacci numbers, we may cache them along the way, so that the recursive functi
 cached values instead of always going to a recursive branch which may have been explored already <br>
 for another computation. <br>
 
+### Benchmarking
 
+The benchmarked code using [nanobench](https://github.com/martinus/nanobench) takes 633.86 nanoseconds to run on my machine.
+
+|               ns/op |                op/s |    err% |          ins/op |         bra/op |   miss% |     total | benchmark
+|--------------------:|--------------------:|--------:|----------------:|---------------:|--------:|----------:|:----------
+|              633.86 |        1,577,633.81 |    0.9% |        5,924.01 |       1,101.00 |    0.2% |      0.01 | `some double ops`
 
 ## Largest prime factor
 
@@ -76,7 +90,15 @@ With this method in mind and my configurable Sieve of Eratosthenes, I had all th
 Taking the number indicated and dividing it by all the prime factor in the order in which they are in the Eratosthenes table allowed
 me to obtain the solution in a rather good amount of compilation and execution time.
 
-![Drag Racing](challenge3/assets/godbolt_execution_results.png)
+### Benchmarking 
+
+The benchmarked code using [nanobench](https://github.com/martinus/nanobench) takes 26,334,719.00 nanoseconds (~26.3 ms) to run on my machine .
+
+
+|               ns/op |                op/s |    err% |          ins/op |         bra/op |   miss% |     total | benchmark
+|--------------------:|--------------------:|--------:|----------------:|---------------:|--------:|----------:|:----------
+|       26,334,719.00 |               37.97 |    0.1% |  201,156,401.00 |  29,186,404.00 |    0.3% |      0.29 | `some double ops`
+
 
 ## Challenge N : <Problem Title>
 
