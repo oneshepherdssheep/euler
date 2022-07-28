@@ -1,3 +1,6 @@
+#define ANKERL_NANOBENCH_IMPLEMENT
+
+#include "nanobench.h"
 #include <iostream>
 #include <cstdint>
 
@@ -107,7 +110,12 @@ uint64_t ComputeChallenge2()
 
 int main()
 {
-    std::cout << "Challenge 2 answer = " << ComputeChallenge2() << std::endl;
+    uint64_t result;
+    ankerl::nanobench::Bench().run("some double ops", [&] {
+        result = ComputeChallenge2();
+        ankerl::nanobench::doNotOptimizeAway(result);
+    });
+    std::cout << "[Result] Challenge 2 answer = " << result << std::endl;
     return EXIT_SUCCESS;
 }
 

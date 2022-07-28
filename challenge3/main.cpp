@@ -1,3 +1,6 @@
+#define ANKERL_NANOBENCH_IMPLEMENT
+
+#include "nanobench.h"
 #include <iostream>
 #include <cstdint>
 #include "eratosthene_table.h"
@@ -31,13 +34,17 @@ uint64_t ComputeChallenge3()
     return result;
 }
 int main(){
-    uint64_t result = ComputeChallenge3();
+    uint64_t result;
+    ankerl::nanobench::Bench().run("some double ops", [&] {
+        result = ComputeChallenge3();
+        ankerl::nanobench::doNotOptimizeAway(result);
+    });
     if(result == 1){
         std::cout << "Issue found! The value of EratostheneTableLength(" << EratostheneTableLength
         <<") might be too low" << std::endl;
     }
     else{
-        std::cout << "The largest Prime Factor of " << TargetNumber <<" is "<< result << std::endl;
+        std::cout << "[Result] The largest Prime Factor of " << TargetNumber <<" is "<< result << std::endl;
     }
 	return EXIT_SUCCESS;
 }
