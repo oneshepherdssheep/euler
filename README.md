@@ -8,7 +8,7 @@ My solutions to the euler project challenges (https://projecteuler.net) implemen
 **[Challenge 2 : Even fibonacci numbers](#even-fibonacci-numbers)**<br>
 **[Challenge 3 : Largest prime factor](#largest-prime-factor)**<br>
 
-## Challenge 1 : Multiples of 3 or 5
+## Multiples of 3 or 5
 
 ### Description
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.<br>
@@ -25,7 +25,7 @@ So if we compute the sum of numbers *only* multiple of 3 (S3), then those *only*
 the sum of numbers *only* multiple of 15 (S15) and then compute the *S = (S3+S5)-S15*, we should have the
 expected value.
 
-## Challenge 2 : Even fibonacci numbers
+## Even fibonacci numbers
 
 ### Description
 
@@ -49,7 +49,7 @@ for another computation. <br>
 
 
 
-## Challenge 3 : Largest prime factor
+## Largest prime factor
 
 ### Description
 
