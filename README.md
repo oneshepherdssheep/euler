@@ -102,7 +102,7 @@ The benchmarked code using [nanobench](https://github.com/martinus/nanobench) ta
 
 
 
-## Challenge 4 : Largest palindrome product
+## Largest palindrome product
 
 ### Description
 
@@ -133,7 +133,7 @@ The benchmarked code using [nanobench](https://github.com/martinus/nanobench) ta
 |--------------------:|--------------------:|--------:|----------------:|---------------:|--------:|----------:|:----------
 |       31,671,128.00 |               31.57 |    0.4% |  299,199,789.00 |  62,391,777.00 |    0.1% |      0.35 | `some double ops`
 
-## Challenge N : <Problem Title>
+## <Problem Title>
 
 ### Description
 <Insert Description Here>
