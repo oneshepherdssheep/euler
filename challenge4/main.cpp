@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <string>
 
-const bool IsNumberPalindrome(const uint64_t number){
+bool IsNumberPalindrome(const uint64_t number){
     bool isPalindrome = true;
     std::string palindromeCandidate = std::to_string(number);
     for(uint16_t index = 0; index < palindromeCandidate.length()/2; index++){
