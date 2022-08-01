@@ -18,7 +18,7 @@ class EratosthenesTable {
 public:
     EratosthenesTable();
     void PrintEratostheneTable();
-    uint16_t GetPrimeNumber(uint16_t number);
+    uint16_t GetPrimeNumber(uint16_t primeIndex);
     uint16_t GetPrimeCount();
 private:
     void FillEratostheneTable();
@@ -73,13 +73,13 @@ void EratosthenesTable<N>::CrossTable() {
 }
 
 template<uint16_t N>
-uint16_t EratosthenesTable<N>::GetPrimeNumber(uint16_t number) {
+uint16_t EratosthenesTable<N>::GetPrimeNumber(uint16_t primeIndex) {
     uint16_t primeChecked = 0;
     uint16_t result = 1;    // <-- we shouldn't return 1
-    if(number < primeCount_m){
+    if(primeIndex < primeCount_m){
         for(uint16_t i = 0; i < N; i++){
             if(EratostheneEntries[i].isPrime_m){
-                if(number == primeChecked){
+                if(primeIndex == primeChecked){
                     result = EratostheneEntries[i].number_m;
                     break;
                 }

@@ -13,7 +13,7 @@ uint64_t ComputeChallenge3()
     uint64_t result = 0;
     uint64_t indexPrime = 0;
     uint64_t computedNumber = TargetNumber;
-    EratostheneTable<EratostheneTableLength> eratostheneTable;
+    EratosthenesTable<EratostheneTableLength> eratostheneTable;
 
     // Processing
     uint16_t prime = eratostheneTable.GetPrimeNumber(indexPrime);
