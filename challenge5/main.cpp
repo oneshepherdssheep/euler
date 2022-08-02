@@ -7,7 +7,7 @@
 #include "eratosthene_table.h"
 
 static constexpr uint8_t MAX_DIVISOR = 20;
-EratosthenesTable<MAX_DIVISOR> eratosthenesTable;
+EratosthenesTable<uint8_t,MAX_DIVISOR> eratosthenesTable;
 
 uint64_t GetResultOfChallenge5(){
     uint64_t result = 1;
@@ -27,6 +27,7 @@ uint64_t GetResultOfChallenge5(){
 
 int main(){
     uint64_t result = 0;
+    eratosthenesTable.PrintEratostheneTable();
     ankerl::nanobench::Bench().run("some double ops", [&] {
         result = GetResultOfChallenge5();
         ankerl::nanobench::doNotOptimizeAway(result);

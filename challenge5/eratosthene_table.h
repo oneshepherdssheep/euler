@@ -8,63 +8,63 @@
 #include <cstdint>
 #include <iostream>
 
-struct EratostheneEntry {
-    uint16_t number_m;
+template<typename T>
+struct Entry {
+    T number_m;
     bool isPrime_m;
 };
 
-template<uint16_t N>
+template<typename T,T N>
 class EratosthenesTable {
 public:
     EratosthenesTable();
     void PrintEratostheneTable();
-    uint16_t GetPrimeNumber(uint16_t primeIndex);
-    uint16_t GetPrimeCount();
+    T GetPrimeNumber(T primeIndex);
+    T GetPrimeCount();
 private:
     void FillEratostheneTable();
     void CrossTable();
-    EratostheneEntry EratostheneEntries[N]{0,false};
-    uint16_t primeCount_m{0};
+    Entry<T> entries_m[N];
+    T primeCount_m{0};
 };
 
-template<uint16_t N>
-EratosthenesTable<N>::EratosthenesTable() {
+template<typename T,T N>
+EratosthenesTable<T,N>::EratosthenesTable() {
     FillEratostheneTable();
     CrossTable();
 }
 
-template<uint16_t N>
-void EratosthenesTable<N>::PrintEratostheneTable() {
-    for(uint16_t i = 0; i < N; i++){
-        if(EratostheneEntries[i].isPrime_m){
-            std::cout << unsigned(EratostheneEntries[i].number_m) << " is prime!" << std::endl;
-        }
+template<typename T,T N>
+void EratosthenesTable<T,N>::PrintEratostheneTable() {
+    for(T i = 0; i < primeCount_m; i++){
+        std::cout << unsigned(GetPrimeNumber(i)) << " is prime!" << std::endl;
     }
 }
 
-template<uint16_t N>
-void EratosthenesTable<N>::FillEratostheneTable() {
-    for(uint16_t i = 0; i < N; i++){
-        EratostheneEntries[i].isPrime_m = false;
-        EratostheneEntries[i].number_m = i+1;
+template<typename T,T N>
+void EratosthenesTable<T,N>::FillEratostheneTable() {
+    for(T i = 0; i < N; i++){
+        entries_m[i].isPrime_m = false;
+        entries_m[i].number_m = i + 1;
     }
 }
 
-template<uint16_t N>
-void EratosthenesTable<N>::CrossTable() {
-    for(uint16_t i = 0;i < N; i++){
-        for(uint16_t j = 0; j <= i; j++){
+template<typename T,T N>
+void EratosthenesTable<T,N>::CrossTable() {
+    for(T i = 0;i < N; i++){
+        for(T j = 0; j <= i; j++){
             if(i == j){
-                if(EratostheneEntries[i].number_m == 1){
-                    EratostheneEntries[i].isPrime_m = false;
+                if(entries_m[i].number_m == 1){
+                    entries_m[i].isPrime_m = false;
                 }
                 else{
-                    EratostheneEntries[i].isPrime_m = true;
+                    entries_m[i].isPrime_m = true;
                     primeCount_m++;
+                    std::cout << "entry : " << unsigned(entries_m[i].number_m)  << std::endl;
                 }
             }
             else{
-                if((EratostheneEntries[j].number_m != 1) && (EratostheneEntries[i].number_m%EratostheneEntries[j].number_m == 0)){
+                if((entries_m[j].number_m != 1) && (entries_m[i].number_m % entries_m[j].number_m == 0)){
                     break;
                 }
             }
@@ -72,15 +72,15 @@ void EratosthenesTable<N>::CrossTable() {
     }
 }
 
-template<uint16_t N>
-uint16_t EratosthenesTable<N>::GetPrimeNumber(uint16_t primeIndex) {
-    uint16_t primeChecked = 0;
-    uint16_t result = 1;    // <-- we shouldn't return 1
+template<typename T,T N>
+T EratosthenesTable<T,N>::GetPrimeNumber(T primeIndex) {
+    T primeChecked = 0;
+    T result = 1;    // <-- 1 is not prime so good candidate here
     if(primeIndex < primeCount_m){
-        for(uint16_t i = 0; i < N; i++){
-            if(EratostheneEntries[i].isPrime_m){
+        for(T i = 0; i < N; i++){
+            if(entries_m[i].isPrime_m){
                 if(primeIndex == primeChecked){
-                    result = EratostheneEntries[i].number_m;
+                    result = entries_m[i].number_m;
                     break;
                 }
                 else {
@@ -95,8 +95,8 @@ uint16_t EratosthenesTable<N>::GetPrimeNumber(uint16_t primeIndex) {
     return result;
 }
 
-template<uint16_t N>
-uint16_t EratosthenesTable<N>::GetPrimeCount() {
+template<typename T,T N>
+T EratosthenesTable<T,N>::GetPrimeCount() {
     return primeCount_m;
 }
 
