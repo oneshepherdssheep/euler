@@ -8,6 +8,7 @@ My solutions to the euler project challenges (https://projecteuler.net) implemen
 **[Challenge 2 : Even fibonacci numbers](#even-fibonacci-numbers)**<br>
 **[Challenge 3 : Largest prime factor](#largest-prime-factor)**<br>
 **[Challenge 4 : Largest palindrome product](#largest-palindrome-product)**<br>
+**[Challenge 5 : Smallest multiple](#smallest-multiple)**<br>
 
 ## Multiples of 3 or 5
 
@@ -132,6 +133,17 @@ The benchmarked code using [nanobench](https://github.com/martinus/nanobench) ta
 |               ns/op |                op/s |    err% |          ins/op |         bra/op |   miss% |     total | benchmark
 |--------------------:|--------------------:|--------:|----------------:|---------------:|--------:|----------:|:----------
 |       31,671,128.00 |               31.57 |    0.4% |  299,199,789.00 |  62,391,777.00 |    0.1% |      0.35 | `some double ops`
+
+## Smallest multiple
+
+### Description
+
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20 ?
+
+### Understanding
+
+### Benchmarking
 
 ## <Problem Title>
 
