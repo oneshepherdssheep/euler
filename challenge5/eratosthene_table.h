@@ -60,7 +60,7 @@ void EratosthenesTable<T,N>::CrossTable() {
                 else{
                     entries_m[i].isPrime_m = true;
                     primeCount_m++;
-                    std::cout << "entry : " << unsigned(entries_m[i].number_m)  << std::endl;
+                    //std::cout << "entry : " << unsigned(entries_m[i].number_m)  << std::endl;
                 }
             }
             else{

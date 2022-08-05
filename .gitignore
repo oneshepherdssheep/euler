@@ -1,0 +1,6 @@
+#ignore cmake directories
+cmake-*
+
+#ignore IDE specific directory
+.idea*
+

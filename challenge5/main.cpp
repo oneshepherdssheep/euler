@@ -27,7 +27,7 @@ uint64_t GetResultOfChallenge5(){
 
 int main(){
     uint64_t result = 0;
-    eratosthenesTable.PrintEratostheneTable();
+    //eratosthenesTable.PrintEratostheneTable();
     ankerl::nanobench::Bench().run("some double ops", [&] {
         result = GetResultOfChallenge5();
         ankerl::nanobench::doNotOptimizeAway(result);
