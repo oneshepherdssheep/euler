@@ -23,6 +23,7 @@ GenerateCmakelistsDotTxt () {
 	cmake_minimum_required(VERSION 3.20)
 	$projectLine
 	set(CMAKE_CXX_STANDARD 11)
+	link_libraries(nanobench)
 	$executableLine
 	EOF
 	chmod 644 $fileName
