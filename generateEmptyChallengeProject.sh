@@ -60,6 +60,23 @@ GenerateDotGitignore () {
 	chmod 644 $fileName
 }
 
+#################################################
+# GenerateReadme                                #
+#################################################
+
+GenerateReadme () {
+	fileName="$1/README.md"
+	cat <<- EOF > $fileName
+	<a id="top"></a>
+	# <Challenge Title Here>
+	## Description
+	Description here
+	## Uderstanding
+	Understanding here
+	## Benchmarking
+	EOF
+	chmod 644 $fileName
+}
 
 #################################################
 # CreateChallengeDirectory                      #
@@ -107,6 +124,7 @@ if [ $# -eq 1 ]; then
 			echo "Creating project folder $ChallengeDirectoryName ..."
 			CreateChallengeDirectory $ChallengeDirectoryName
 			GenerateCmakelistsDotTxt $ChallengeDirectoryName $1
+			GenerateReadme $ChallengeDirectoryName $1
 			GenerateMainDotCpp $ChallengeDirectoryName
 			GenerateDotGitignore $ChallengeDirectoryName
 		fi
