@@ -4,3 +4,5 @@ cmake-*
 #ignore IDE specific directory
 .idea*
 
+#ignore PVS-Studio
+.PVS-Studio*
