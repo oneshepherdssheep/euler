@@ -31,7 +31,9 @@ If we continue, we will see that the more we expand the sum of number squared, t
 - a squared element
 - a product with the form :
 
-$$ 2(i)(j+...+100) with j=i+1 and j not exceeding 100 $$
+$$ 2(i)(j+...+100) $$
+
+with j=i+1 and j not exceeding 100 
 
 Even the last sum squared will be like:
 
