@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
+set(CMAKE_CXX_STANDARD 17)
 project("euler" VERSION 1.0.0 LANGUAGES C CXX)
 
 # --------------------------
@@ -11,6 +12,7 @@ add_subdirectory(challenge2)
 add_subdirectory(challenge3)
 add_subdirectory(challenge4)
 add_subdirectory(challenge5)
+add_subdirectory(challenge6)
 
 # --------------------------
 # submodules
