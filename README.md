@@ -27,3 +27,4 @@ For each challenge, I give:
 **[Challenge 5 : Smallest multiple](challenge5/README.md)**<br>
 **[Challenge 6 : Sum square difference](challenge6/README.md)**<br>
 **[Challenge 7 : 10001st prime number](challenge7/README.md)**<br>
+**[Challenge 8 : Largest product in a series](challenge8/README.md)**<br>
