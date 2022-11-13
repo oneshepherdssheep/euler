@@ -23,6 +23,7 @@ add_subdirectory(challenge5)
 add_subdirectory(challenge6)
 add_subdirectory(challenge7)
 add_subdirectory(challenge8)
+add_subdirectory(challenge9)
 
 # --------------------------
 # submodules
