@@ -41,7 +41,9 @@ $$ (3) a + b + c = 1000 $$
 So if we take the point (2) we have :
 
 $$ a^2 + b^2 = c^2 $$
+
 $$ a^2 = c^2 - b^2 $$
+
 $$ a^2 = (c - b)*(c + b) $$
 
 however we know that :
@@ -51,19 +53,21 @@ $$ (3) a + b + c = 1000 $$
 then :
 
 $$ a^2 = (c - b)*(1000 - a) $$
+
 $$ a = (c - b)*(1000 - a)/a $$
 
 so it means that either : 
 
-$$ (A) c - b = k*a , k being part of Z $$ 
+$$ (A) c - b = k*a$$ 
 
 or
 
-$$ (B) 1000 - a = k*a, k being part of Z $$
+$$ (B) 1000 - a = k*a$$
 
 Let's assume that (A) is true then :
 
 $$ (c-b)^2 = k^2*a^2 $$
+
 $$ c^2 - 2bc + b^2 = k^2*a^2 $$
 
 but we know that :
@@ -73,8 +77,11 @@ $$ c^2 = a^2 + b^2 $$
 then:
 
 $$ a^2 + b^2 - 2bc - b^2 = k^2*a^2 $$
+
 $$ a^2 + 2b^2 - 2bc = k^2*a^2 $$
+
 $$ 2b^2 - 2bc = k^2*a^2 - a^2 $$
+
 $$ 2b*(b-c) = (k^2-1)*a^2 $$
 
 however 
@@ -112,7 +119,9 @@ so (A) is impossible!
 Which means only (B) is possible.
 
 $$ (B) 1000 - a = k*a $$
+
 $$ 1000 = a*(k+1) $$
+
 $$ k+1 = 1000 / a $$
 
 which means , 1000 is divisible by a.
@@ -120,6 +129,7 @@ which means , 1000 is divisible by a.
 This last sentence is key for the algorithm because we will take all the 'a' such as :
 
 a <= 500
+
 a divides 1000
 
 It will help us have a number of iterations in our algorithm reduced to the minimum.
