@@ -28,3 +28,4 @@ For each challenge, I give:
 **[Challenge 6 : Sum square difference](challenge6/README.md)**<br>
 **[Challenge 7 : 10001st prime number](challenge7/README.md)**<br>
 **[Challenge 8 : Largest product in a series](challenge8/README.md)**<br>
+**[Challenge 9 : Special Pythagorean triplet](challenge9/README.md)**<br>
