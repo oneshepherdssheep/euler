@@ -14,6 +14,11 @@ I don't want to rob you of the joy you have when you understand and implement yo
 
 So, you have been warned.
 
+## Edit
+
+As soon as I reach problem 50, I will no longer post complete solution but rather
+just add my badges and/or problem completion sheet.
+
 # Project Euler
 
 My solutions to the euler project challenges (https://projecteuler.net) implemented in C++.
