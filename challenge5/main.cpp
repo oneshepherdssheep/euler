@@ -4,10 +4,10 @@
 #include <iostream>
 #include <cstdint>
 #include "nanobench.h"
-#include "eratosthene_table.h"
+#include "eratosthene_sieve.h"
 
 static constexpr uint8_t MAX_DIVISOR = 20;
-EratosthenesTable<uint8_t,MAX_DIVISOR> eratosthenesTable;
+EratosthenesSieve<uint8_t,MAX_DIVISOR> eratosthenesTable;
 
 uint64_t GetResultOfChallenge5(){
     uint64_t result = 1;

@@ -2,7 +2,3 @@
 cmake-*
 # ignore IDE specific directory
 .idea*
-# ignore .i files
-*.i
-# ignore .cfg files
-*.cfg

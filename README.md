@@ -1,11 +1,16 @@
 # ⚠️ Warning ⚠️
 
 The Euler Project is very useful project to help us go beyond our normal day to day programming activities
-(unless you are working on research projects). So because of the benefits we get from working on those
-amazing challenges, I do not suggest that you check those solutions **UNLESS** you have already figured out the 
-solution by yourself.
+(unless you are working on research projects).
 
-I publish my solutions to show my understanding and approaches when dealing with each challenge.
+So because of the benefits we get from working on those
+amazing challenges, I do not suggest that you check those solutions **UNLESS** you have already figured out the 
+solution by yourself and want to compare either the implementation or the thought process behind my solutions.
+
+I publish my solutions to show my understanding and approaches when dealing with each challenge and also for documentation
+purpose.
+
+I don't want to rob you of the joy you have when you understand and implement your solution to one of the problems.
 
 So, you have been warned.
 
@@ -29,3 +34,4 @@ For each challenge, I give:
 **[Challenge 7 : 10001st prime number](challenge7/README.md)**<br>
 **[Challenge 8 : Largest product in a series](challenge8/README.md)**<br>
 **[Challenge 9 : Special Pythagorean triplet](challenge9/README.md)**<br>
+**[Challenge 10 : Summation of primes](challenge10/README.md)**<br>
