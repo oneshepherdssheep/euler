@@ -53,14 +53,14 @@ EOF
 GenerateDotGitignore () {
 	fileName="$1/.gitignore"
 	cat <<- EOF > $fileName
-  # ignore build directory
-  cmake-*
-  # ignore IDE specific directory
-  .idea*
-  # ignore .i files
-  *.i
-  # ignore .cfg files
-  *.cfg
+# ignore build directory
+cmake-*
+# ignore IDE specific directory
+.idea*
+# ignore .i files
+*.i
+# ignore .cfg files
+*.cfg
 	EOF
 	chmod 644 $fileName
 }
