@@ -80,11 +80,12 @@ root {
 
 For this configuration, we have to make sure that the index of the root element, respect the 
 following requirement:
-- element at [root.x+4,root.y] is inside the grid
 
-$$ root.x + 4 < GRID_X_LIMIT $$
+- element at [root.x+4-1,root.y] is inside the grid
 
-The product will be equal to
+$$ root.x + 4 < GRIDXLIMIT $$
+
+The product will be equal to :
 
 $$ P = [root.x,root.y]*[root.x+1,root.y]*[root.x+2,root.y]*[root.x+3,root.y] $$
 
@@ -92,11 +93,12 @@ $$ P = [root.x,root.y]*[root.x+1,root.y]*[root.x+2,root.y]*[root.x+3,root.y] $$
 ![](asset/euler_11_diagonal.png)
 
 Here, the root element index should respect the following requirements:
-- element at [root.x+4,root.y+4] is inside the grid
 
-$$ root.x + 4 < GRID_X_LIMIT $$
+- element at [root.x+4-1,root.y+4-1] is inside the grid
 
-$$ root.x + 4 < GRID_Y_LIMIT $$
+$$ root.x + 4 < GRIDXLIMIT $$
+
+$$ root.x + 4 < GRIDYLIMIT $$
 
 The product will be equal to
 
@@ -106,9 +108,10 @@ $$ P = [root.x,root.y]*[root.x+1,root.y+1]*[root.x+2,root.y+2]*[root.x+3,root.y+
 ![](asset/euler_11_bottom.png)
 
 Here, the root element index should respect the following requirement:
-- element at [root.x,root.y+4] is inside the grid
 
-$$ root.y + 4 < GRID_Y_LIMIT $$
+- element at [root.x,root.y+4-1] is inside the grid
+
+$$ root.y + 4 < GRIDYLIMIT $$
 
 The product will be equal to
 
@@ -118,11 +121,12 @@ $$ P = [root.x,root.y]*[root.x,root.y+1]*[root.x,root.y+2]*[root.x,root.y+3] $$
 ![](asset/euler_11_reverse_diagonal.png)
 
 Here, the root element index should respect the following requirement:
+
 - element at [root.x-4+1,root.y+(4-1)] is inside the grid thus 
 
 $$ root.x + 1 - 4 >= 0 $$
 
-$$ root.y + 4 < GRID_Y_LIMIT $$
+$$ root.y + 4 < GRIDYLIMIT $$
 
 The product will be equal to
 
@@ -132,6 +136,7 @@ $$ P = [root.x,root.y]*[root.x-1,root.y+1]*[root.x-2,root.y+2]*[root.x-3,root.y+
 ![](asset/euler_11_left.png)
 
 Here, the root element index should respect the following requirement:
+
 - element at [root.x-4+1,root.y] is inside the grid thus
 
 $$ root.x + 1 - 4 >= 0 $$
