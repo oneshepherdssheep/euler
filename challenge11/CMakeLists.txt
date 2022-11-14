@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.20)
+project(challenge11)
+set(CMAKE_CXX_STANDARD 11)
+link_libraries(nanobench)
+add_executable(challenge11 main.cpp)
