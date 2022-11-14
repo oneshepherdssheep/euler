@@ -6,3 +6,10 @@ cmake-*
 
 #ignore PVS-Studio
 .PVS-Studio*
+
+#ignore .cfg files
+*.cfg
+
+#ignore .i files
+*.i
+
