@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.20)
+project(challenge12)
+set(CMAKE_CXX_STANDARD 11)
+set(APP_NAME "challenge12")
+link_libraries(nanobench)
+add_executable(${APP_NAME} main.cpp)
+target_include_directories(${APP_NAME} PUBLIC ${NUMERALS_LIBRARY_INCLUDES})
+target_link_libraries(${APP_NAME} ${NUMERALS_LIBRARY_NAME})

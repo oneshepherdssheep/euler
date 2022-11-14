@@ -41,3 +41,4 @@ For each challenge, I give:
 **[Challenge 9 : Special Pythagorean triplet](challenge9/README.md)**<br>
 **[Challenge 10 : Summation of primes](challenge10/README.md)**<br>
 **[Challenge 11 : Largest product in a grid](challenge11/README.md)**<br>
+**[Challenge 12 : Highly divisible triangular number](challenge12/README.md)**<br>
