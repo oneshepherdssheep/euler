@@ -7,6 +7,7 @@
 
 #include <cstdint>
 #include <cmath>
+#include <cassert>
 
 
 namespace numerals {
@@ -30,6 +31,68 @@ namespace numerals {
         }
         return evenDivisorCount+2;
     }
+
 };
+
+
+namespace numerals
+{
+    template<std::size_t N>
+    class VeryLargeInteger
+    {
+    public:
+
+        VeryLargeInteger() :
+                largeInteger{0}
+        {
+            for(std::size_t index = 0; index < N; index++)
+            {
+                largeInteger[index] = '0';
+            }
+        }
+
+        void addDigit(const char digit)
+        {
+            addDigit(0,digit);
+        }
+
+        void addNumber(const std::string number){
+            for(int index = number.length()-1; index >= 0;index--)
+            {
+                addDigit((number.length()-1)-index,number[index]);
+            }
+        }
+
+        void print()
+        {
+            for(int index = N-1; index >= 0; index--)
+            {
+                if(index==0)
+                    std::cout << largeInteger[index] << std::endl;
+                else
+                    std::cout << largeInteger[index];
+            }
+        }
+
+    private:
+
+        void addDigit(std::size_t index,const char digit)
+        {
+            assert(index < N); // make sure we don't go too far
+            int temp = (largeInteger[index]-'0') + (digit - '0');
+            if(temp > 9)
+            {
+                largeInteger[index] = '0'+(temp - ((temp/10)*10));
+                addDigit(index+1,'0'+(temp/10));
+            }
+            else
+            {
+                largeInteger[index] = '0'+temp;
+            }
+        }
+
+        char largeInteger[N];
+    };
+}
 
 #endif //EULER_NUMERALS_H

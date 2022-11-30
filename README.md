@@ -24,7 +24,7 @@ just add my badges and/or problem completion sheet.
 My solutions to the euler project challenges (https://projecteuler.net) implemented in C++.
 
 For each challenge, I give:
-- description of the challenge as described on their website
+- description of the problem as described on their website
 - my understanding of the challenge : how I understood it and what I did to make it work (equations, mathematical properties etc.)
 - implementation/solution for the challenge
 
@@ -42,3 +42,4 @@ For each challenge, I give:
 **[Challenge 10 : Summation of primes](challenge10/README.md)**<br>
 **[Challenge 11 : Largest product in a grid](challenge11/README.md)**<br>
 **[Challenge 12 : Highly divisible triangular number](challenge12/README.md)**<br>
+**[Challenge 13 : Large Sum](challenge13/README.md)**<br>
