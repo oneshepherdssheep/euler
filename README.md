@@ -43,3 +43,4 @@ For each challenge, I give:
 **[Challenge 11 : Largest product in a grid](challenge11/README.md)**<br>
 **[Challenge 12 : Highly divisible triangular number](challenge12/README.md)**<br>
 **[Challenge 13 : Large Sum](challenge13/README.md)**<br>
+**[Challenge 14 : Longest Collatz sequence](challenge14/README.md)**<br>
