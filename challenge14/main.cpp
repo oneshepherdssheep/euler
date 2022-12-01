@@ -25,13 +25,13 @@ void challenge_014()
     uint64_t maxChainNumber=0;
     for(uint64_t index = 1; index < LIMIT_NUMBER; index++)
     {
-        std::atomic<uint64_t> cz;cz.store(0);
-        std::atomic<uint64_t> chainSize;chainSize.store(1);
-        std::atomic<uint64_t> subIndex;subIndex.store(index);
+        uint64_t cz;cz = 0;
+        uint64_t chainSize;chainSize = 1;
+        uint64_t subIndex;subIndex = index;
         do {
             chainSize++;
             cz = collatz(subIndex);
-            subIndex.store(cz);
+            subIndex = cz;
         } while (cz!=1);
 
         if(chainSize > maxChainSize)
